@@ -46,7 +46,7 @@
 		      
 
 			    <div id="navigation">
-			    	<?-- php wp_list_pages("title_li="); --?>
+
 			    	<?php wp_list_categories("title_li="); ?>
 			    </div>
 		    
