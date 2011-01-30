@@ -49,7 +49,7 @@ p {
 	font-size: 16px;
 	font-family: Georgia;
 	line-height: 24px;
-	margin: 15px 10px 15px 10px;
+	margin: 20px;
 	font-weight: normal;
 }
 
@@ -247,7 +247,7 @@ p#date, p#edit {
 }
 
 
-.post h2, #sidebar h2 {margin: 10px;}
+.post h2, #sidebar h2 {margin: 10px 20px;}
 
 .post h2 {
 	line-height: 50px;
@@ -256,7 +256,7 @@ p#date, p#edit {
 
 .post img {
 	/*float: left;*/
-	margin: 10px 15px 30px 10px;
+	margin: 20px;
 	border: solid #adadad 1px;
 }
 
@@ -299,6 +299,22 @@ img.post-pic {
 	width:600px; 
 	margin: 7px 0 0 70px; 
 	line-height: 20px;
+}
+
+.post pre {
+    font-family: Consolas,Monaco,"Courier New",Courier,monospace;
+    font-size: 14px;
+    font-weight: inherit;
+    margin-bottom: 22px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: none repeat scroll 0 0 #F0F0F0;
+    border: 1px solid #DADADA;
+    line-height: 1.3em;
+    overflow: auto;
+    padding: 11px;
+    margin: 20px;
 }
 
 a.button {
@@ -423,7 +439,7 @@ a.button:hover {
 
 
 
-#respond {clear: both; float:left; margin: 20px 0 0 10px ;}
+#respond {clear: both; float:left; margin: 20px ;}
 
 #respond p {
 	font-size:14px;
