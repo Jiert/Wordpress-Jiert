@@ -43,11 +43,7 @@
 		<!-- use the following method to link to other assets -->
 		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/MYSCRIPT.js"></script>
 		
-		<!-- use if custom assets are needed; will load only in those cases; uses template name -->
-		<?php if (is_page_template('TEMPLATE-NAME.php')) { ?>
-		    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/MYSTYLES.css" type="text/css" media="screen" />
-			<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/MYSCRIPT.js"></script>
-		<?php } ?>
+
 		
 		<!-- use if custom assets are needed; will load only in those cases; uses page ID -->
 		<?php if (is_page("PAGE-ID-NUMBER")) { ?>
