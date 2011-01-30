@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Template: Index.php
  *
  * @package WordPress
@@ -9,14 +9,11 @@ get_header();
 ?>
 
 <div id="contentWrapper">
-<div id="content">
+	<div id="content">
 
-<!-- Are there any posts published? -->
-<?php if (have_posts()) : ?> 
+	<?php if (have_posts()) : ?> 
 	
 	<?php while (have_posts()) : the_post(); ?> 
-	
-	<!-- each post will have this div applied to it -->
 		
 	<div class="postWrapper shadow" id="post-<?php the_ID(); ?>">
 	
@@ -25,21 +22,14 @@ get_header();
 		<p id="date" class="meta"><?php the_time('F jS, Y'); ?></p>
 	</div>
 	
-	 
-	
-		
-	
 		<div class="post">
-		<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2> 
+			<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2> 
 
-		<!-- custom field that is attached to this Post. Here, the key of "Post Thumb," which returns an <img /> tag symbolizing this Post. -->
-		<img class="alignleft" src="<?php echo get_post_meta($post->ID, "postImage", true);?>" />  
+			<img class="alignleft" src="<?php echo get_post_meta($post->ID, "postImage", true);?>" />  
 
 
-		
-		<!-- the full content of the post -->
-		<?php the_content('<br/>More &raquo;'); ?>
-	</div><!-- end post -->
+			<?php the_content('<br/>More &raquo;'); ?>
+		</div><!-- post -->
 		
 
 	<div class="postBorderBottom roundCornerBottom">
@@ -49,24 +39,19 @@ get_header();
 	
 	</div><!-- postWrapper -->
 	
-	<!-- end of loop -->
-	<?php endwhile; ?> <!-- End of the loop -->
+	<?php endwhile; ?>
 
-	<!-- links to older/newer posts -->
 	<?php previous_posts_link('<div id="newer" class="button">&laquo; Newer Posts</div>'); ?>
 	<?php next_posts_link('<div id="older" class="button">Older Posts &raquo;</div>'); ?>
 	
-	
-	<!-- in case there are no posts -->
 	<?php else : ?>
 
-		<!-- display this -->
 		<h2>Nothing Found</h2>
 
-<?php endif; ?>
+	<?php endif; ?>
 
 </div><!-- end content -->
 
 <?php get_sidebar(); ?>
-</div><!-- end contentWrapper -->
+</div><!-- contentWrapper -->
 <?php get_footer(); ?>
