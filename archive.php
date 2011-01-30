@@ -7,8 +7,6 @@
 get_header();
 ?>
 
-<!-- this code comes from the default wordpress theme -->
-
 	<div id="content" class="narrowcolumn" role="main">
 
 		<?php if (have_posts()) : ?>
